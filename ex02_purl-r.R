@@ -3,7 +3,14 @@
 #' output: github_document
 #' ---
 #' 
-#' 
+## ---- include=FALSE------------------------------------------------------
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  error = TRUE
+)
+options(tidyverse.quiet = TRUE)
+
 #' 
 #' # File 2
 #' 
@@ -15,18 +22,13 @@
 #' 
 #' ```
 #' files <- dir()[grepl("^ex", dir())]
-#' lapply(files, knitr::purl, documentation = 2)
+#' lapply(files, knitr::purl, documentation = 2L)
 #' ```
 #' 
 #' ## Test
 #' 
 #' Expect render.
 #' 
-#' 
-#' ```r
-#' 1 + 1
-#' ```
-#' 
-#' ```
-#' ## [1] 2
-#' ```
+## ------------------------------------------------------------------------
+1 + 1
+

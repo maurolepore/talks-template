@@ -15,7 +15,7 @@ This file is a distinct code example.
 
 ```
 files <- dir()[grepl("^ex", dir())]
-lapply(files, knitr::purl, documentation = 2)
+lapply(files, knitr::purl, documentation = 2L)
 ```
 
 ## Test
@@ -25,8 +25,5 @@ Expect render.
 
 ```r
 1 + 1
-```
-
-```
-## [1] 2
+#> [1] 2
 ```

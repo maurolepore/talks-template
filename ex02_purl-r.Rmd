@@ -4,7 +4,12 @@ output: github_document
 ---
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  error = TRUE
+)
+options(tidyverse.quiet = TRUE)
 ```
 
 # File 2
@@ -17,7 +22,7 @@ This file is a distinct code example.
 
 ```
 files <- dir()[grepl("^ex", dir())]
-lapply(files, knitr::purl, documentation = 2)
+lapply(files, knitr::purl, documentation = 2L)
 ```
 
 ## Test
