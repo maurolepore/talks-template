@@ -1,0 +1,22 @@
+---
+title: "Master"
+output: ioslides_presentation
+---
+
+##
+
+* This file calls all children and creates a presentation.
+
+* .gitignore the .html and publish to rstudioconnect, or call it index and publish on github pages.
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r, child="ex01_knit-md.Rmd"}
+
+```
+
+```{r, child="ex02_purl-r.Rmd"}
+
+```
